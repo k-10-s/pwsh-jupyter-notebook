@@ -1,5 +1,8 @@
 # PowerShell Jupyter Notebook
 
+[![Docker Image CI](https://github.com/k-10-s/pwsh-jupyter-notebook/actions/workflows/docker-image.yml/badge.svg)](https://github.com/k-10-s/pwsh-jupyter-notebook/actions/workflows/docker-image.yml)
+
+
 ## Build Locally
 Build the Docker Image locally;
 * Clone this repo
