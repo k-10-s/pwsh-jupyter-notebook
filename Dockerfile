@@ -16,7 +16,7 @@ WORKDIR ${HOME}
 USER root
 
 # PowerShell
-RUN if [ "$TARGETPLATFORM" = "arm64" ]; then \
+RUN if [ "$TARGETPLATFORM" = "linux/arm64" ]; then \
       curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.4.6/powershell-7.4.6-linux-arm64.tar.gz; \
       sudo mkdir -p /opt/microsoft/powershell/7; \
       sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7; \
