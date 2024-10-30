@@ -45,5 +45,8 @@ ENV PATH="${PATH}:${HOME}/.dotnet/tools"
 # Install kernel specs
 RUN dotnet interactive jupyter install
 
+#bake in some python packages
+RUN pip install matplotlib pandas numpy seaborn
+
 # Set root to Home 
 WORKDIR ${HOME}/
