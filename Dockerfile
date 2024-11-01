@@ -32,7 +32,8 @@ RUN if [ "$TARGETPLATFORM" = "linux/arm64" ]; then \
 # Dot Net SDK 
 RUN apt-get install -y apt-transport-https && sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0 
 RUN sudo apt-get install -y dotnet-sdk-8.0
-RUN dotnet tool install -g Microsoft.dotnet-interactive
+RUN dotnet new tool-manifest
+RUN dotnet tool install Microsoft.dotnet-interactive
 ENV DOTNET_TRY_CLI_TELEMETRY_OPTOUT=true
 
 RUN chown -R ${NB_UID} ${HOME}
